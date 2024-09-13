@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изменить запись</title>
+</head>
+<body>
+    <h1>Изменить запись</h1>
+    <form method="POST">
+        <label for="title">Название:</label>
+        <input type="text" name="title" id="title" value="{{ entry.title }}" required>
+        <label for="content">Содержание:</label>
+        <textarea name="content" id="content" required>{{ entry.content }}</textarea>
+        <button type="submit">Сохранить</button>
+    </form>
+    <a href="{{ url_for('index') }}">Вернуться к Дневнику</a>
+</body>
+</html>
